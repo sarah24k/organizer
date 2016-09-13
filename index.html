@@ -207,7 +207,7 @@
 		    	}
 			};
 			function setbackground() {
-				var urls = ["http://67.media.tumblr.com/d1eec41eae5d96c55c95d6214c9168c8/tumblr_ng93g0lPzV1ttq3fbo2_1280.jpg","http://i.imgur.com/BG02dnj.jpg","http://www.zayende.com/images/resimler/IMG-20151104-WA0005.jpg","https://iso.500px.com/wp-content/uploads/2015/10/thispop_cover.jpeg"];
+				var urls = ["http://67.media.tumblr.com/d1eec41eae5d96c55c95d6214c9168c8/tumblr_ng93g0lPzV1ttq3fbo2_1280.jpg","http://i.imgur.com/BG02dnj.jpg","http://www.zayende.com/images/resimler/IMG-20151104-WA0005.jpg","https://iso.500px.com/wp-content/uploads/2015/10/thispop_cover.jpeg","http://farzinphoto.com/wp-content/uploads/2014/04/8V7A0037_HDR.jpg"];
 				var currentURL_long = document.getElementsByTagName('body')[0].style.backgroundImage;
 				var currentURL = currentURL_long.substring(5, currentURL_long.length-2);
 				if(currentURL == urls[0]) {
@@ -216,6 +216,8 @@
 					document.getElementsByTagName('body')[0].style.backgroundImage = "url(" + urls[2] + ")";
 				} else if (currentURL == urls[2]) {
 					document.getElementsByTagName('body')[0].style.backgroundImage = "url(" + urls[3] + ")";
+				} else if (currentURL == urls[3]) {
+					document.getElementsByTagName('body')[0].style.backgroundImage = "url(" + urls[4] + ")";
 				} else {
 					document.getElementsByTagName('body')[0].style.backgroundImage = "url(" + urls[0] + ")";
 				}
