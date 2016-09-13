@@ -199,9 +199,12 @@
 		
 		<script type="text/javascript">
 			function changebackground(){
+			var urls = ["http://67.media.tumblr.com/d1eec41eae5d96c55c95d6214c9168c8/tumblr_ng93g0lPzV1ttq3fbo2_1280.jpg","http://i.imgur.com/BG02dnj.jpg","http://www.zayende.com/images/resimler/IMG-20151104-WA0005.jpg","https://iso.500px.com/wp-content/uploads/2015/10/thispop_cover.jpeg","http://farzinphoto.com/wp-content/uploads/2014/04/8V7A0037_HDR.jpg"];
+			var currentURL_long = document.getElementsByTagName('body')[0].style.backgroundImage;
+			var currentURL = currentURL_long.substring(5, currentURL_long.length-2);
 		    	var url = document.getElementById('bgchanger').value;
 		    	if (url == "") {
-		    		document.getElementsByTagName('body')[0].style.backgroundImage = "url('https://drscdn.500px.org/photo/103960697/m%3D2048/f14d55eb0b30b9abe4f433f42b670767')";
+		    		document.getElementsByTagName('body')[0].style.backgroundImage = "url(currentURL_long)";
 		    	} else {
 		    		document.getElementsByTagName('body')[0].style.backgroundImage = "url('" + url + "')";
 		    	}
