@@ -4,7 +4,12 @@ body{
         width:100%;
         margin:0;
         padding:0;
-        background-image: url("img/island.jpg");
+        background: url("img/cinqueTerre.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow:hidden;
 }
 
 header{
@@ -38,6 +43,7 @@ nav a{
 
 h1{
         display: center;
+        font-size: 50px;
         font-family: 'Open Sans', sans-serif;
         color:#fff;
 }
@@ -59,13 +65,15 @@ nav a.selected, nav a:hover{
         color:#000;
 }
 
+
+
 a{
         text-decoration: none;
         color: white;
 
 }
 a:hover{
-        color: black;
+        color: grey;
 }
 
 #myPic{
@@ -94,58 +102,161 @@ html, body, .container
     min-height: 100%;
 }
 
-.first {
-        float: left;
-        width: 30%;
-        height: 100px;
-        padding-top: 0px;
-        padding-left: 20px;
-        padding-bottom: 20px;
+.left-sidebar {
+        color:white;
+        top:0;
+        left:0;
+        width: 150px;
+        height: 700px;
+        float:left;
+        padding-left:20;
+        padding-top:25;
+        /*background-color:rgba(0, 0, 0, 0.05);*/
 }
 
-.second{
-    float: left;
-    width: 30%;
+.left-sidebar ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.center-top{
+    position:fixed;
+    top:0;
+    left:150;
+    right:150;
+    width:auto;
+    text-align: center;
+    padding-top:50px;
+    padding-bottom: 50px;
     height: 100px;
+}
+
+.top-right{
+    color: white;
+    font-size: 25;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index:3;
+    width: 120px;
+    height: 30px;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+.center{
+    position: absolute;
+    top:200;
+    left:190;
+    right:190;
+    text-align:center;
+    height: auto;
+    width: auto;
     padding-top: 0px;
-    padding-left: 20px;
     padding-bottom: 20px;
 }
 
-.third{
-    float: left;
-    width: 30%;
-    height: 100px;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-
-.fourth{
-    float: left;
-    width: 33.3%;
-    height: 100px;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-
-.fifth{
-    float: left;
-    width: 33.3%;
-    height: 100px;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+.right-center{
+    position:absolute;
+    top:200;
+    right:0;
+    width: 170px;
+    height: auto;
+    color: white;
 
 
 }
 
-.sixth{
-    float: left;
-    width: 33.3%;
+.center-bottom{
+    color:white;
+    position:fixed;
+    bottom:0;
+    left:150;
+    right:150;
+    text-align: center;
+    width:auto;
+    height: 130px;
+}
+
+.bottom-right{
+    position:fixed;
+    right:0;
+    bottom:0;
+    width:170px;
+    height:130px;
+    color: white;
+
+
+}
+
+
+
+/****** CALENDAR STYLING ******/
+ul{
+    padding:0;
+    list-style-type: none;
+}
+
+.month {
+    /*padding: 70px 25px;*/
+    width: 100%;
+    background: none;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    /*background-color: #ddd;*/
+    background-color:rgba(0, 0, 0, 0.5);
+    border-bottom-width: 3px;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12%;
+    color: white;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    /*background: #eee;*/
+    background-color:rgba(0, 0, 0, 0.5);
+    margin: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
     height: 100px;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:14px;
+    color: white;
+
+}
+
+.days li #active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important;
+    width: 24%;
 }
